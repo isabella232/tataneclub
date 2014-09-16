@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>5th Throw Tatane Cup | 2014.09.15</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    user-scalable=no">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div id="page">
+
+      <div id="brand"><div class="container"><a href="/">I love tatane
+            cup<sub>shanghai 2014</sub></a></div></div>
+      <div id="banner">
+        <div class="container">
+          <hgroup>
+            <h1>5th throw tatane cup</h1>
+            <h2><time pubdate>2014.09.15</time></h2>
+          </hgroup>
+          <div id="summary">
+            <p>participants were asked to bing their own flip-flops and kick them
+              with their bare foot,with the winner decided by distance.</p>
+            <p><i class="icon-arrow-down"></i></p>
+          </div>
+        </div>
+        <canvas id="shoe-canvas"></canvas>
+      </div>
+
+      <div id="map">
+        <canvas id="map-canvas"></canvas>
+        <div class="container">
+          <address>
+            <p>the monkey-pope is found in all whalers, but it was only in the
+              pequod that the moneky and his holder were ever tied together.</p>
+            <p id="phone"><i class="icon-phone"></i><strong>183-0217-9417</strong></p>
+          </address>
+        </div>
+      </div>
+
+      <div id="photos">
+        <div class="container">
+          <ul>
+            <li><img src="images/map_2x.png" alt="pic1"></li>
+            <li><img src="images/map_2x.png" alt="pic2"></li>
+            <li><img src="images/map_2x.png" alt="pic3"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="container">
+          <h2>sponsor</h2>
+          <ul>
+            <li><a href="#"><img src="" alt="wiredcraft"></a></li>
+            <li><a href="#"><img src="" alt="wiredcraft"></a></li>
+            <li><a href="#"><img src="" alt="wiredcraft"></a></li>
+            <li><a href="#"><img src="" alt="wiredcraft"></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <script>
+      var shoeCanvas = document.getElementById('shoe-canvas'),
+          shoeCanvasContext = shoeCanvas.getContext('2d');
+
+      shoeCanvas.width = 650;
+      shoeCanvas.height = 800;
+
+      addBaseImageToShoeCanvas();
+
+      function addBaseImageToShoeCanvas() {
+        shoeBaseImage = new Image();
+        shoeBaseImage.src = 'images/shoe.png';
+        shoeBaseImage.onload = function() {
+          shoeCanvasContext.drawImage(shoeBaseImage, 0, 0, 650, 800);
+        };
+      }
+
+      var mapCanvas = document.getElementById('map-canvas'),
+          mapCanvasContext = mapCanvas.getContext('2d');
+
+      mapCanvas.width = 600;
+      mapCanvas.height = 552;
+
+      addBaseImageToMapCanvas();
+
+      function addBaseImageToMapCanvas() {
+        mapBaseImage = new Image();
+        mapBaseImage.src = 'images/map_2x.png';
+        mapBaseImage.onload = function() {
+          mapCanvasContext.drawImage(mapBaseImage, 0, 0, 600, 552);
+        };
+      }
+
+    </script>
+  </body>
+</html>
+

@@ -70,15 +70,8 @@
       shoeCanvas.width = 650;
       shoeCanvas.height = 800;
 
-      addBaseImageToShoeCanvas();
-
-      function addBaseImageToShoeCanvas() {
-        shoeBaseImage = new Image();
-        shoeBaseImage.src = 'images/shoe.png';
-        shoeBaseImage.onload = function() {
-          shoeCanvasContext.drawImage(shoeBaseImage, 0, 0, 650, 800);
-        };
-      }
+      var shoeImage = "images/shoe.png";
+      addBaseImage(shoeCanvasContext, shoeImage, 650, 800);
 
       var mapCanvas = document.getElementById('map-canvas'),
           mapCanvasContext = mapCanvas.getContext('2d');
@@ -86,16 +79,16 @@
       mapCanvas.width = 600;
       mapCanvas.height = 552;
 
-      addBaseImageToMapCanvas();
+      var mapImage = "images/map_2x.png";
+      addBaseImage(mapCanvasContext, mapImage, 600, 552);
 
-      function addBaseImageToMapCanvas() {
-        mapBaseImage = new Image();
-        mapBaseImage.src = 'images/map_2x.png';
-        mapBaseImage.onload = function() {
-          mapCanvasContext.drawImage(mapBaseImage, 0, 0, 600, 552);
+      function addBaseImage(canvas, img, width, height) {
+        var baseImage = new Image();
+        baseImage.src = img;
+        baseImage.onload = function() {
+          canvas.drawImage(baseImage, 0, 0, width, height);
         };
       }
-
     </script>
   </body>
 </html>

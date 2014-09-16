@@ -21,6 +21,7 @@ body {
   color: #fff;
   font: 600 1em/140% Comfortaa, sans-serif;
   text-transform: capitalize;
+  background: transparent url("../images/bg_2x.png") repeat;
   @include retina-image("../images/bg", 700px 700px);
 }
 
@@ -40,6 +41,7 @@ body {
     @include size(100px 87px);
     text-indent: -9999em;
     overflow: hidden;
+    background: transparent url("../images/logo_2x.png") no-repeat;
     @include retina-image("../images/logo", 100px 87px);
   }
 }
@@ -54,6 +56,7 @@ body {
     .icon-arrow-down {
       display: block;
       @include size(24px 24px);
+      background: transparent url("../images/arrow_2x.png") no-repeat;
       @include retina-image("../images/arrow", 24px 24px);
     }
   }
@@ -68,9 +71,7 @@ body {
   @include uncollapse-margin();
   #map-canvas {
     display: block;
-    @include size(600px 552px);
     @include margin(null auto null auto);
-    @include retina-image("../images/map", 600px 552px);
   }
   address {
     font-style: normal;

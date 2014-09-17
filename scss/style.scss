@@ -1,6 +1,17 @@
 @import "bourbon/bourbon";
 @import "normalize";
 
+@font-face {
+  font-family: "Din Round";
+  src: url('../fonts/titillium-semibold-webfont.eot');
+  src: url('../fonts/titillium-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/titillium-semibold-webfont.woff') format('woff'),
+       url('../fonts/titillium-semibold-webfont.ttf') format('truetype'),
+       url('../fonts/titillium-semibold-webfont.svg#titilliumbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @mixin uncollapse-margin {
   @include clearfix();
   &:before {
@@ -21,7 +32,7 @@ body {
   color: #fff;
   font: 600 1em/140% Comfortaa, sans-serif;
   text-transform: capitalize;
-  background: #1cb457 url("../images/bg_2x.png") repeat;
+  background-color: #26d17f;
   @include retina-image("../images/bg", 700px 700px);
 }
 
@@ -41,8 +52,8 @@ body {
     @include size(100px 87px);
     text-indent: -9999em;
     overflow: hidden;
-    background: transparent url("../images/logo_2x.png") no-repeat;
     @include retina-image("../images/logo", 100px 87px);
+    background-size: 100px 87px;
   }
 }
 
@@ -56,8 +67,8 @@ body {
     .icon-arrow-down {
       display: block;
       @include size(24px 24px);
-      background: transparent url("../images/arrow_2x.png") no-repeat;
       @include retina-image("../images/arrow", 24px 24px);
+      background-size: 24px 24px;
     }
   }
 }

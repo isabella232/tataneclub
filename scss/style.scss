@@ -117,7 +117,23 @@ body {
   ul {
     @include unstyled-horizontal-list();
     li {
-      width: percentage(1/4);
+      background-color: #fff;
+      a {
+        display: block;
+        text-align: center;
+        @include size(166px 166px);
+        &:before {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          max-width: 60%;
+        }
+      }
     }
   }
 }

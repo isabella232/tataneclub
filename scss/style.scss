@@ -21,7 +21,7 @@ body {
   color: #fff;
   font: 600 1em/140% Comfortaa, sans-serif;
   text-transform: capitalize;
-  background: transparent url("../images/bg_2x.png") repeat;
+  background: #1cb457 url("../images/bg_2x.png") repeat;
   @include retina-image("../images/bg", 700px 700px);
 }
 

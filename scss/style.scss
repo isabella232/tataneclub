@@ -23,7 +23,8 @@ body {
   font: 600 1em/140% 'Varela Round', Comfortaa, sans-serif;
   text-transform: capitalize;
   background-color: #26d17f;
-  @include retina-image("../images/bg", 700px 700px);
+  @include retina-image("../images/bg", 700px 700px, jpg);
+  background-attachment: fixed;
 }
 
 .container {
